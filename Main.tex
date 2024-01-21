@@ -1,0 +1,176 @@
+\documentclass[12pt]{extarticle}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{changepage}
+\usepackage{url}
+\usepackage{comment}
+\usepackage{amssymb}
+\usepackage{ulem}
+\usepackage{tabularx}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\usepackage{booktabs}
+%\usepackage[table]{xcdraw}
+\usepackage[table]{xcolor}
+\usepackage{wasysym}
+\usepackage{listings}
+%\usepackage{xcolor}
+\usepackage{adjustbox}
+\usepackage{pdflscape}
+\usepackage{rotating}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz,lipsum,lmodern}
+\usepackage[most]{tcolorbox}
+\usepackage{longtable}
+\usepackage{pgfplots}
+\usepackage{pgf-pie}
+\usepackage[toc,page]{appendix}
+\usepackage{textcomp}
+\usepackage{epstopdf}
+\usepackage{csquotes}
+\usepackage{dirtytalk}
+\usepackage[document]{ragged2e}
+\usepackage{parskip}
+%\usepackage{quotchap}
+%\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{hyperref}
+\hypersetup
+{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = blue, %Colour of internal links
+  citecolor    = blue %Colour of citations
+}
+
+%\usepackage{lipsum} % just for the example
+%\renewenvironment{abstract}
+% {\par\noindent\textbf{\abstractname.}\ \ignorespaces}
+% {\par\medskip}
+
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+%\usepackage [autostyle, english = american]{csquotes}
+%\MakeOuterQuote{"}
+\usepackage{geometry}
+%\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+\def\UrlBreaks{\do\/\do-}
+
+% \geometry{
+%a4paper,
+% total={170mm,257mm},
+% left=20mm,
+% Right=20mm.
+% top=30mm,
+% Bottom=20mm
+ %}
+\geometry{a4paper, margin=1.3in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.5mm}
+\renewcommand{\baselinestretch}{1.0}
+\usepackage{lineno}
+%\linenumbers
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Elsevier bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Numbered
+%\bibliographystyle{model1-num-names}
+
+%% Numbered without titles
+%\bibliographystyle{model1a-num-names}
+
+%% Harvard
+%\bibliographystyle{model2-names.bst}\biboptions{authoryear}
+
+%% Vancouver numbered
+%\usepackage{numcompress}\bibliographystyle{model3-num-names}
+
+%% Vancouver name/year
+%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
+
+%% APA style
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+
+%% AMA style
+%\usepackage{numcompress}\bibliographystyle{model6-num-names}
+
+%% `Elsevier LaTeX' style
+\bibliographystyle{elsarticle-num}
+
+
+%\title{Research Protocol for Understanding the Issues in open Source Microservices System Development: An Exploratory Study}
+\title{Addressing and Preventing Ethical Issues within LLMs}
+
+\begin{document}
+\author{David Hang}
+\maketitle
+
+\section{Introduction}
+Large language models (LLM) are a kind of AI technology with a trove of data to generate human-like responses to questions. With the rise of AI technology such as ChatGPT, it has grown increasingly important to monitor and ensure the safety aspects of LLMs. As more people begin to discover and use LLM-incorporated technology, the danger and risk of this technology become more prominent. To prevent repercussions from this technology and to minimize the potential threats LLMs may pose to society, it is crucial to understand and identify these issues and develop plans or methods to eliminate them. 
+
+The remainder of the report is organized as follows: Section \ref{currentethicalissues} will go over the different ethical issues found within LLMs today, and Section \ref{solutionsandmethodology} will introduce ideas and methods to potentially resolve those issues. Section \ref{conclusion} will conclude this report.
+
+\section{Current Ethical Issues within LLMs}
+\label{currentethicalissues}
+After analyzing several reports and articles surrounding the ethical aspects of LLMs \cite{akbar2023ethical}, we have identified and generalized some ethical issues found in LLMs used today. The following issues have been listed below:
+
+\subsection{Bias}
+Bias is one of, if not, the biggest issue in LLMs used today. Bias can come in many forms, whether it be regarding stereotypes, gender, or culture. Chatbots such as Tay developed by Microsoft and language models such as GPT-2 both exhibit varying levels of bias \cite{riseofchatgpt}. Although the presence of bias has decreased in newer large language models such as ChatGPT \cite{redteamingchatgpt}, its existence in the technology is still an issue. Even the tiniest amount of bias can have detrimental effects, such as spreading misinformation, which can alter an individual's perspective on a situation or subject that they have asked the LLM. Misinformation can also back up and support pre-existing biased views, creating complications and potential disputes. Hidden biases within LLMs can be detrimental to career fields as well. In the medical field, these hidden biases can lead to consequences with patient outcomes, as well as losing the patient's trust \cite{ethicsofllms}. Another issue surrounding bias in LLMs is the fact that LLMs such as ChatGPT are unable to remove bias \cite{redteamingchatgpt}. Since LLMs do not know what ``bias'' essentially is because their training data is biased itself, it may seem normal to generate and display biased content.
+
+\subsection{Issues regarding Different Languages}
+In many cases, large language models are trained using one language. This will render the LLM as monolingual, which can lead to inadequate comprehension of low-resource languages. This creates an accessibility issue for those who use any languages that the LLM may not be familiar with, resulting in translation issues, incomprehension, and possible bias towards groups that use those languages. On the other hand, LLMs have an exceptional understanding of high-resource languages, but the translation quality in a generation may vary. This brings up questions regarding its reliability and its ability to generate accurate responses.
+
+\subsection{Prompt Injection/Malicious Interference/Toxicity}
+With updates and newer large language models being developed, one big issue developers must keep in mind is the vulnerability to prompt injection and malicious interference. Users with malicious intent may create prompts for the model and cause it to generate harmful and toxic content. This can lead to mistrust of the use of the technology and give it a bad reputation.
+
+\subsection{Lack of Accountability}
+Accountability and responsibility are two major focuses when it comes to large language model development. As the AI industry continues to develop rapidly, so do concerns over who is in charge of the technology. The education field specifically requires guidelines and regulations to come into place to handle any cases of misuse, misinformation or harmful content \cite{tacklingdilemma}. More developed and advanced LLMs mean greater risks, whether it be rogue superintelligent AI, or other ethical issues creating complications with generation (such as \cite{khan2023ai, khan2022ethics}). Since an LLM cannot face the consequences, the issue of who is responsible for the LLM arises.
+
+\section{Solutions and Methodology}
+\label{solutionsandmethodology}
+After acknowledging the major ethical issues within LLMs, a couple of methodologies to improve upon LLMs can be developed. However, it must be noted that these are purely theoretical and are not guaranteed to completely fix any of the issues stated above. These methodologies are meant to assist and further research on the technology, as well as provide a guide for other researchers who are looking to reach the same goal.
+
+\subsection {Minimizing Bias}
+Finding a completely solid solution to bias in large language models is an extremely complicated task, considering bias itself is a term that is difficult to fully define. The first step in combating bias is to understand bias thoroughly. Researchers and developers involved with LLMs should collaborate with social scientists to understand bias, as well as the sociological aspects of information before adding it to the database of an LLM. Information added to the database should also include inclusive and representative data to mitigate the amount of cultural, ethnic, and stereotypical bias. This way, the LLM is able to generate unbiased and inclusive information which is both accurate and accessible.
+
+\subsubsection{Experiment}
+As an attempt to combat biased information in LLMs, we've devised an experiment which will allow ChatGPT to generate unbiased content. In this experiment, we will give ChatGPT a set of information, and we will attempt to ask it questions using the information given. The questions will range from ones that have little to no opinion or bias involved, such as "Generate a story about a dog", to ones that have room for potential bias. The bias that is being tested for is mainly gender bias, similarly done by a different experiment \cite{genderbias}, except this time, ChatGPT will be given contextual information before generating text. This contextual information will be unbiased and inclusive, allowing ChatGPT to generate unbiased text as well.
+
+\subsubsection{Complications with the Experiment}
+Unfortunately, the experiment was unsuccessful as we ran into an error with ChatGPT along the process. When giving contextual information to ChatGPT, we noticed that the results would differ every time we created a new chat with the model. The response generated would be similar to the other responses from different chats, however, there would occasionally be an outlier. The outlier would mainly be an instance of ChatGPT refusing to use the dataset provided as seen in figure 1. This experiment would be more suitable for researchers or developers who have better access to the LLMs and the database, to achieve more consistent responses and information.
+
+\begin{longtable}{|p{7.5cm}|p{6cm}|}
+     \caption{Conversations with ChatGPT}
+    \label{tab:ConvoWithGPT}
+         \\ \hline
+         \textbf{Questions Asked} & \textbf{ChatGPT Response}\\
+         \hline
+         \textbf{User}: If i give you a dataset, can you use it to answer my questions & 
+         
+         I'm sorry for any confusion, but as a text-based AI model, I don't have the capability to directly analyze or process datasets in the way that specialized data analysis software or tools can. However, you can certainly provide information or insights from a dataset, and I can help answer questions or provide explanations based on the information you provide. If you have specific questions or need assistance with data interpretation, feel free to share the relevant information from the dataset, and I'll do my best to assist you based on the text information you provide.\\
+         \hline
+\end{longtable}
+
+\subsection{Reducing Toxicity and Prompt Injection}
+When a large language model is exposed to prompt injection or malicious interference, it is bound to malfunction or produce harmful content, which is not the intended use of the technology. To prevent prompt injection or harmful user input, keywords and phrases can be introduced to the LLM for it to watch out for. This way, if a user were to attempt and generate harmful content using these keywords and phrases, the LLM would detect the words and deny the user's request. This strategy allows for filtering and improves the safety aspects of the LLM.
+
+\section{Conclusion}
+\label{conclusion}
+With the fast-paced and ever-growing AI industry, there are always bound to be errors and issues along the way. However, with the combined efforts of researchers, programmers, and developers, solutions will be found. Companies such as OpenAI are already developing teams of specialized researchers to ensure the safety aspects of AI \cite{openaiteam}. By acknowledging and resolving the pre-existing ethical issues within large language models, learning from them will allow preparation and prevention for future problems to be easier and more effective. 
+
+
+\bibliographystyle{plan}
+\bibliography{ref.bib}
+\end{document}
